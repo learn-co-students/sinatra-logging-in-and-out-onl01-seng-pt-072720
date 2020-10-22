@@ -6,7 +6,12 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
   </head>
   <body id="page-top">
-    
-
+    <% if User.is_logged_in?(session) %>
+      <h3>Welcome <%= User.current_user(session).username %></h3>
+      <h4>Your balance is <%= User.current_user(session).balance %></h4>
+      <a href="/logout">Log Out</a>
+    <% else %>
+      <% erb :error %>
+    <% end %>
   </body>
 </html>
