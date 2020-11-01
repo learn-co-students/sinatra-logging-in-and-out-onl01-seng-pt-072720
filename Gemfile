@@ -9,6 +9,8 @@ gem 'sqlite3', '~>1.3.6'
 gem 'thin'
 gem 'shotgun'
 gem 'pry'
+gem 'rb-readline'
+#gem 'pry-coolline'
 
 group :test do
   gem 'rspec'
